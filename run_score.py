@@ -186,7 +186,7 @@ from torchvision.io import read_image
 from torch.utils.data import DataLoader
 
 
-class GoTCHA_dataset(Dataset):
+class dataset(Dataset):
     def __init__(self, img_dir, transform=None):
         self.img_dir = img_dir
         self.imgs = list(Path(img_dir).glob("*.jpg"))
@@ -240,7 +240,7 @@ for chal in range(16):
             #path = f"/challenges/{imp}/{chal}/{sub}/fake"
             #path = f"/vast/jy3694/all_dataset_simswap/{imp}/{chal}/{sub}"
             path = f"/vast/jy3694/all_dataset_simswap_celeb/{imp}/{chal}/{sub}"
-            dataset = GoTCHA_dataset(img_dir=path)
+            dataset = dataset(img_dir=path)
             dataloader = DataLoader(dataset, batch_size=128, num_workers=0, shuffle=False)
             s, p = infer_batch(dataloader)
             np.savez(os.path.join(results_path, f"{imp}_{chal}_{sub}.npz"), scores=s, preds=p)
