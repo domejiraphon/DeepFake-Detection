@@ -54,10 +54,10 @@ parser.add_argument('--test',
             help="select which module to attack")
 parser.add_argument('--segment_cfg_file', type=str, 
             default='utils/openmmlab/deeplabv3plus_celebA_train_wo_natocc_wsot.py',
-            help="config fule from the one govind as ked in face occlusion issue")
+            help="config fule from the oneas ked in face occlusion issue")
 parser.add_argument('--segment_pth_file', type=str, 
             default="utils/openmmlab/iter_27600.pth",
-            help="pretrained model from the one govind asked in face occlusion issue")
+            help="pretrained model from the one asked in face occlusion issue")
 parser.add_argument('--dst_seg_path', 
             type=str, 
             default="/vast/jy3694/captcha_segment_dataset",
