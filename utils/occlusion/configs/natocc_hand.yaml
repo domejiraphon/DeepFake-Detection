@@ -1,0 +1,20 @@
+MODE:
+  RANDOCC: False    # FALSE MEANS NATOCC
+
+SOURCE_DATASET:
+  IMG_DIR: "/face_occlusion_generation/CelebAMask-HQ-WO-Train_img/"
+  MASK_DIR: "/face_occlusion_generation/CelebAMask-HQ-WO-Train_mask/"
+
+OCCLUDER_DATASET:
+  IMG_DIR: "/face_occlusion_generation/11k_hands_img/"
+  MASK_DIR: "/face_occlusion_generation/11k_hands_masks/"
+
+OUTPUT_PATH: "/scratch/jy3694/data/face_occlusion/NatOcc_hand/"
+
+#whether to generate mask of occlusion( for RainNet)
+OCCLUSION_MASK: False
+
+AUGMENTATION:
+  SOT: False
+  ROTATE_AROUND_CENTER: True
+
